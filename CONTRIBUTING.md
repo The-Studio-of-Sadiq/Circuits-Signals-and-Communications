@@ -1,4 +1,40 @@
-# House Style — Circuits, Signals and Communications
+# Contributing — Circuits, Signals and Communications
+
+Corrections, clearer explanations, better figures and new worked examples are welcome. Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## How to contribute
+
+- **Found an error?** Open an [Erratum](../../issues/new?template=erratum.yml) issue with the section number (e.g. §14.8), what the book says and what it should say, with a derivation or a numerical check.
+- **A figure is wrong or unclear?** Open a [Figure](../../issues/new?template=figure.yml) issue, or fix `figures/scripts/chNN.py` and send a pull request.
+- **Build, figure-script or MCP-server problem?** Open a [Tooling bug](../../issues/new?template=tooling-bug.yml).
+- **Bigger change** (a new section, a rewrite, a new worked example)? Open a [Proposal](../../issues/new?template=proposal.yml) first so the scope can be agreed.
+
+## Pull requests
+
+1. One topic per pull request: a fix, a figure, a section.
+2. Follow the house style below; every number you add must be checked (e.g. with Python).
+3. Run the checks locally before pushing (CI runs the same ones):
+
+```bash
+npm ci
+```
+
+```bash
+npm run check
+```
+
+```bash
+python scripts/build-figures.py ch14
+```
+
+4. Changed a figure? Commit the script and the regenerated PNG together. Added a figure marker? Draw it, run `node scripts/insert-figures.mjs` and `npm run figures:plan`.
+5. Leave `pdf/` alone; the PDF is rebuilt and attached to each release by the release workflow.
+
+By contributing you agree that your contribution is licensed under the repository's [MIT License](LICENSE).
+
+---
+
+# House Style
 
 The master outline is [`TOC.md`](TOC.md). It is fixed: 7 parts, 35 chapters. Do not skip, merge or rename listed topics; every bullet in the TOC must be covered by a section or subsection of its chapter.
 

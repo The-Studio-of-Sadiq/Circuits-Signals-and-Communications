@@ -1,10 +1,18 @@
 # Circuits, Signals and Communications
 
+[![Check book](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/actions/workflows/check.yml/badge.svg)](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/actions/workflows/check.yml)
+[![Release](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/actions/workflows/release.yml/badge.svg)](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/actions/workflows/release.yml)
+[![PDF](https://img.shields.io/badge/PDF-780%20pages-red.svg)](pdf/Circuits-Signals-and-Communications.pdf)
+[![Wiki](https://img.shields.io/badge/wiki-5%20pages-blue.svg)](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/wiki)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+![Circuits, Signals and Communications](docs/social-preview.png)
+
 **Book 3 — The Circuits, Signals & Communications Core**
 
 The theory of electrical networks, continuous- and discrete-time signals, system behaviour, information transmission and communication channels. This is the core that connects mathematical methods with almost every other EEE discipline: circuit laws and network theorems, transients and AC power, two-ports and transmission lines, signals and LTI systems, sampling and DSP, analog and digital communication, information theory, wireless, optical and RF links, and introductory feedback control.
 
-**Read the book as a PDF:** [`pdf/Circuits-Signals-and-Communications.pdf`](pdf/Circuits-Signals-and-Communications.pdf)
+**Read the book as a PDF:** [`pdf/Circuits-Signals-and-Communications.pdf`](pdf/Circuits-Signals-and-Communications.pdf) or from the [latest release](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/releases/latest) · **Wiki:** [chapter guide, figures, tooling](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/wiki)
 
 ## Contents
 
@@ -29,7 +37,9 @@ The theory of electrical networks, continuous- and discrete-time signals, system
 | [`TOC.md`](TOC.md) | master syllabus and boundaries with the other books |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | house style |
 | [`FIGURES.md`](FIGURES.md) | figure plan: every figure, where it goes and what it shows |
-| [`scripts/`](scripts) | PDF, figure and figure-plan build scripts |
+| [`scripts/`](scripts) | PDF, figure, figure-plan, book-check, social-preview and wiki scripts |
+| [`docs/`](docs) | social preview image |
+| [`.github/`](.github) | CI and release workflows, issue and pull-request templates |
 | [`mcp/`](mcp) | an MCP server so Claude and other clients can search, read and typeset the book ([README](mcp/README.md)); Claude Code picks it up from [`.mcp.json`](.mcp.json) |
 | [`pdf/`](pdf) | the compiled book |
 
@@ -81,6 +91,12 @@ claude mcp add circuits-signals -- node /absolute/path/to/this/repo/mcp/server.m
 
 Tools: `list_contents`, `read_part`, `search_book`, `list_figures`, `get_figure`, `build_pdf`. See [`mcp/README.md`](mcp/README.md).
 
-## License
+## Contributing
 
-MIT — see [LICENSE](LICENSE).
+Corrections, clearer explanations and better figures are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) (workflow and house style) and report errors with the **Erratum** issue template. Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md). Security issues in the tooling: see [SECURITY.md](SECURITY.md). Release history: [CHANGELOG.md](CHANGELOG.md).
+
+CI (`.github/workflows/check.yml`) checks the sources, the figure plan, the MCP server and every figure script on each push; pushing a `v*` tag builds the PDF and publishes a release (`.github/workflows/release.yml`).
+
+## Citation and license
+
+To cite the book, use [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button reads it). Content and code are under the [MIT License](LICENSE).
