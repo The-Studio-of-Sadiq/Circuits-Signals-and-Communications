@@ -2,7 +2,7 @@
 
 All notable changes to *Circuits, Signals and Communications*. Dates are ISO 8601. Versions follow the tags in this repository; each release attaches the compiled PDF.
 
-## [1.0.0] — 2026-10-23
+## [1.0.0] — 2026-10-22
 
 First complete edition.
 
